@@ -1,0 +1,41 @@
+.List {
+  a {
+    text-decoration: underline !important;
+  }
+  .row {
+    margin-top: 30px;
+    overflow: auto;
+    height: 621px;
+    overflow-x: hidden;
+  }
+  .place-details {
+    // box-shadow: 0px 0px 5px 5px #eeeeee59;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+    width: 48%;
+    margin: 10px auto;
+    .img-fluid {
+      height: 270px;
+      width: 100%;
+    }
+    .place-head {
+      font-size: 19px;
+      font-weight: 500;
+      padding: 10px 0;
+      font-family: $header-font;
+    }
+    .cuisine {
+      background-color: #eee;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+    .info {
+      color: #545454;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

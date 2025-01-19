@@ -1,0 +1,113 @@
+.LandingPage {
+  .flights-card {
+    position: relative;
+    .locations {
+      background-color: $orange-color;
+      position: absolute;
+      top: 137px;
+      left: -40px;
+      padding: 20px;
+      border-radius: 6px;
+      width: 250px;
+      color: white;
+      .name {
+        font-weight: bold;
+        font-size: 21px;
+        margin-top: -5px;
+      }
+      .btm-loc {
+        margin-top: 10px;
+      }
+    }
+    .content {
+      width: 80%;
+      margin-left: 10%;
+      padding-bottom: 20px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        left: -55px;
+        width: 32px;
+        height: 100%;
+        background-color: $orange-color;
+      }
+    }
+    .header {
+      font-family: "Montserrat";
+      font-weight: 900;
+      font-size: 77px;
+      margin-top: 111px;
+      line-height: 1.3;
+    }
+    .desc {
+      margin-top: 20px;
+    }
+    .howWork {
+      background-color: black;
+      width: 180px;
+      color: white;
+      text-align: center;
+      padding: 13px 0px;
+      cursor: pointer;
+      font-size: 19px;
+      margin-top: 22px;
+      display: block;
+    }
+  }
+
+  .image-card {
+    margin-top: 13px;
+  }
+  @media (max-width: 1600px) {
+    .flights-card {
+      .content {
+        width: 90%;
+      }
+      .header {
+        font-size: 64px;
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+    .flights-card {
+      .header {
+        font-size: 48px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .flights-card {
+      .header {
+        font-size: 39px;
+      }
+    }
+    .image-card {
+      display: flex;
+    }
+  }
+  @media (max-width: 992px) {
+    .flights-card {
+      .header {
+        font-size: 32px;
+      }
+      .locations {
+        top: 348px;
+        left: 56px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .flights-card {
+      .header {
+        margin-top: 60px;
+      }
+      .locations {
+        top: 263px;
+      }
+    }
+    .image-card {
+      margin-bottom: 90px;
+    }
+  }
+}

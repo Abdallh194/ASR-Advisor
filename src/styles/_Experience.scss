@@ -1,0 +1,52 @@
+.Experience {
+  margin-top: 50px;
+  .head {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 42px;
+    font-family: $header-font;
+  }
+  .info {
+    width: 68%;
+    margin: auto;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.541);
+  }
+  .head,
+  .info {
+    text-align: center;
+  }
+  .Plan-Card {
+    display: flex;
+    margin-top: 45px;
+    text-align: left;
+    .icon {
+      font-size: 29px;
+      margin-right: 24px;
+      color: $orange-color;
+    }
+    .header {
+      font-weight: 600;
+      font-size: 21px;
+      font-family: "Montserrat";
+      margin-bottom: 5px;
+    }
+    .desc {
+      color: #a0a0a0;
+    }
+    .more {
+      color: $orange-color;
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 992px) {
+    margin-top: 100px;
+    .head {
+      font-size: 33px;
+    }
+    .info {
+      width: 100%;
+      font-size: 19px;
+    }
+  }
+}

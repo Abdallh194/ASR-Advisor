@@ -1,0 +1,30 @@
+@import "bootstrap/dist/css/bootstrap.css"; //bootstrap
+
+// fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap"); //main font
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"); //logo font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); //header font
+//vars
+$main-font: "cairo";
+$logo-font: "Amatic SC", sans-serif;
+$orange-color: #5c32d6;
+$header-font: "Montserrat";
+
+//global css code
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+body {
+  font-family: $main-font !important;
+}
+
+// components css filess
+@import "./styles/Header";
+@import "./styles/LandingPage";
+@import "./styles/Experience";
+@import "./styles/searchbar";
+@import "./styles/Map";
+@import "./styles/List";

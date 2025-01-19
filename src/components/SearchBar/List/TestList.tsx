@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
 import Rating from "@mui/material/Rating";
-const TestList = ({ EleRef }: string[]) => {
+const TestList = () => {
   console.log("fire");
 
   return (

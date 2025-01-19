@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Col, Form } from "react-bootstrap";
 import PlacesDetails from "./PlacesDetails";
 type Props = {
@@ -52,4 +52,4 @@ const List: React.FC<Props> = ({ places }) => {
   );
 };
 
-export default List;
+export default memo(List);

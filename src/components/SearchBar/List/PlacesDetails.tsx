@@ -1,4 +1,5 @@
 import { Rating } from "@mui/material";
+import { memo } from "react";
 import { Col, Row } from "react-bootstrap";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa";
@@ -71,4 +72,4 @@ const PlacesDetails: React.FC<Props> = ({ places }) => {
   );
 };
 
-export default PlacesDetails;
+export default memo(PlacesDetails);

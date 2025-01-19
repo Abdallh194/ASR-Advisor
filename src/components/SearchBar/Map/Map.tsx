@@ -1,6 +1,7 @@
 import { Col } from "react-bootstrap";
 import GoogleMapReact from "google-map-react";
 import { Paper, Rating, Typography } from "@mui/material";
+import { memo } from "react";
 
 const Map = ({
   setbounds,
@@ -59,4 +60,4 @@ const Map = ({
   );
 };
 
-export default Map;
+export default memo(Map);

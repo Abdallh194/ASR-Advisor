@@ -32,6 +32,7 @@ type TPlace = {
   web_url: string;
   website: string;
   num_reviews: string;
+  is_closed: boolean;
   photo: {
     images: {
       small: { width: string; url: string; height: string };

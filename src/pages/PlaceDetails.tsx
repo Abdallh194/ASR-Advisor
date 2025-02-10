@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch } from "@redux/hooks";
+import { useAppDispatch, useAppSelector } from "@redux/hooks";
 import { GetFillteredPlaces } from "@redux/Places/PlacesSlice";
 import { Container } from "react-bootstrap";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { FillteredDataByMe } from "@constants/constants";
 import PlaceHeader from "@components/PlaceDetails/PlaceHeader";
 import PlaceInfo from "@components/PlaceDetails/PlaceInfo";
 import PlaceImage from "@components/PlaceDetails/PlaceImage";
@@ -20,10 +19,12 @@ const PlaceDetails = () => {
     dispatch(GetFillteredPlaces(decodeURIComponent(prefix as string)));
   }, [prefix, dispatch]);
 
+  const { FillteredPlaces } = useAppSelector((s) => s.resturants);
+
   return (
     <HelmetProvider>
       <Container className="FillteredPlaces" style={{ maxWidth: "1150px" }}>
-        {FillteredDataByMe.map((place, idx) => (
+        {FillteredPlaces.map((place, idx) => (
           <div className="Place-Details" key={idx}>
             <Helmet>
               <title>

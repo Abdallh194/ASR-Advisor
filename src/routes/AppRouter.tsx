@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorBoundary from "@error/ErrorBoundary";
 const MainLayout = lazy(() => import("@layout/MainLayout"));
 import Loader from "@components/Loading/Loader";
-import ErrorBoundary from "@error/ErrorBoundary";
 import PageNotFound from "@error/PageNotFound";
 import HomePage from "@pages/HomePage";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PlaceDetails from "@pages/PlaceDetails";
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +22,10 @@ const routes = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "/placeDetails/:prefix",
+        element: <PlaceDetails />,
       },
     ],
   },

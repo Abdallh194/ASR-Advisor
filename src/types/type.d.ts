@@ -2,13 +2,26 @@ type Coordinates = { lat: number; lng: number };
 type Bounds = {
   ne: { lat: number; lng: number };
   sw: { lat: number; lng: number };
+  type?: string;
 };
+
 declare type TMapsProps = {
   setcoordinates: Dispatch<SetStateAction<Coordinates>>;
   setbounds: Dispatch<SetStateAction<Bounds>>;
   coordinates: Coordinates;
   Place: TPlace[];
   setchildclicked: (...args: string[]) => void;
+  WeatherData: WeatherResponse;
+  childclicked: string;
+};
+type ListProps = {
+  places: TPlace[];
+  type: string;
+  rate: number;
+  settype: (...args: string[]) => void;
+  setrate: (...args: number[]) => void;
+  error: TError;
+  loading: TLoading;
 };
 type TPlace = {
   name: string;
@@ -49,4 +62,33 @@ type TPlace = {
   cuisine: {
     name: string;
   }[];
+};
+
+declare type TLoading = "pending" | "succeeded" | "failed";
+declare type TError = string | null;
+declare interface IResturantsState {
+  Places: TPlace[];
+  loading: TLoading;
+  error: TError;
+}
+type WeatherResponse = {
+  coord: {
+    lon: number;
+    lat: number;
+  };
+  weather: {
+    icon: string;
+  }[];
+};
+type MarkerProps = {
+  lat: number;
+  lng: number;
+  name: string;
+  photo: string | null;
+  rating: number;
+};
+type WeatherMarkerProps = {
+  WeatherData: WeatherResponse;
+  lat: number;
+  lng: number;
 };

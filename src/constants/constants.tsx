@@ -64,6 +64,100 @@ export const Place = [
   { name: "Skyline Paradise" },
 ];
 
+export const WeatherDta = {
+  coord: {
+    lon: 0,
+    lat: 0,
+  },
+  weather: [
+    {
+      id: 501,
+      main: "Rain",
+      description: "moderate rain",
+      icon: "10n",
+    },
+  ],
+  base: "stations",
+  main: {
+    temp: 299.24,
+    feels_like: 299.24,
+    temp_min: 299.24,
+    temp_max: 299.24,
+    pressure: 1011,
+    humidity: 80,
+    sea_level: 1011,
+    grnd_level: 1011,
+  },
+  visibility: 10000,
+  wind: {
+    speed: 1.97,
+    deg: 218,
+    gust: 2.2,
+  },
+  rain: {
+    "1h": 1.06,
+  },
+  clouds: {
+    all: 100,
+  },
+  dt: 1737519267,
+  sys: {
+    sunrise: 1737526074,
+    sunset: 1737569697,
+  },
+  timezone: 0,
+  id: 6295630,
+  name: "Globe",
+  cod: 200,
+};
+export const FooterCardData = [
+  {
+    header: "Help",
+    links: [
+      "Help and contact",
+      "Travel updates",
+      "Special assistance",
+      "common questions",
+    ],
+  },
+  {
+    header: "Book flights",
+    links: [
+      "Book flights",
+      "Travel services",
+      "Transportation",
+      "Planning your trip",
+      "Search for flights",
+    ],
+  },
+  {
+    header: "Booking management",
+    links: [
+      "Check in",
+      "Manage reservations",
+      "Private car with driver",
+      "Flight status",
+    ],
+  },
+  {
+    header: "before traveling",
+    links: [
+      "Luggage",
+      "Manage reservations",
+      "Private car with driver",
+      "Flight status",
+    ],
+  },
+  {
+    header: "Lorem Ipsum",
+    links: [
+      "Check in",
+      "Manage reservations",
+      "Private car with driver",
+      "Flight status",
+    ],
+  },
+];
 export const RapiedData = [
   {
     location_id: "4975370",
@@ -3889,6 +3983,161 @@ export const RapiedData = [
     is_candidate_for_contact_info_suppression: false,
     cuisine: [],
     dietary_restrictions: [],
+    establishment_types: [
+      {
+        key: "10591",
+        name: "Restaurants",
+      },
+    ],
+  },
+];
+
+export const FillteredDataByMe = [
+  {
+    location_id: "4975370",
+    name: "Stereo",
+    latitude: "30.79275",
+    longitude: "31.00943",
+    num_reviews: "28",
+    timezone: "Africa/Cairo",
+    location_string: "Tanta, Gharbia Governorate",
+    photo: {
+      images: {
+        small: {
+          width: "150",
+          url: "https://media-cdn.tripadvisor.com/media/photo-l/0c/3c/f3/10/stereo.jpg",
+          height: "150",
+        },
+        thumbnail: {
+          width: "50",
+          url: "https://media-cdn.tripadvisor.com/media/photo-t/0c/3c/f3/10/stereo.jpg",
+          height: "50",
+        },
+        original: {
+          width: "567",
+          url: "https://media-cdn.tripadvisor.com/media/photo-o/0c/3c/f3/10/stereo.jpg",
+          height: "567",
+        },
+        large: {
+          width: "550",
+          url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/95/a0/19/b612-20190726-203138.jpg?w=900&h=500&s=1",
+          height: "550",
+        },
+        medium: {
+          width: "450",
+          url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/3c/f3/10/stereo.jpg",
+          height: "450",
+        },
+      },
+      is_blessed: false,
+      uploaded_date: "2016-07-26T00:40:54-0400",
+      caption: "STEREO",
+      id: "205320976",
+      helpful_votes: "5",
+      published_date: "2016-07-26T00:40:54-0400",
+      user: {
+        user_id: null,
+        member_id: "0",
+        type: "user",
+      },
+    },
+    awards: [],
+    doubleclick_zone: "af.egypt",
+    preferred_map_engine: "default",
+    raw_ranking: "3.2999041080474854",
+    ranking_geo: "Tanta",
+    ranking_geo_id: "668545",
+    ranking_position: "1",
+    ranking_denominator: "35",
+    ranking_category: "restaurant",
+    ranking: "#1 of 64 Restaurants in Tanta",
+    distance: "5.102448308512903",
+    distance_string: "5.1 km",
+    bearing: "west",
+    rating: "4.5",
+    is_closed: true,
+    is_long_closed: false,
+    price_level: "$$ - $$$",
+    description: "",
+    web_url:
+      "https://www.tripadvisor.com/Restaurant_Review-g668545-d4975370-Reviews-Stereo-Tanta_Gharbia_Governorate.html",
+    write_review:
+      "https://www.tripadvisor.com/UserReview-g668545-d4975370-Stereo-Tanta_Gharbia_Governorate.html",
+    ancestors: [
+      {
+        subcategory: [
+          {
+            key: "city",
+            name: "City",
+          },
+        ],
+        name: "Tanta",
+        abbrv: null,
+        location_id: "668545",
+      },
+      {
+        subcategory: [
+          {
+            key: "province",
+            name: "Province",
+          },
+        ],
+        name: "Gharbia Governorate",
+        abbrv: null,
+        location_id: "2630285",
+      },
+      {
+        subcategory: [
+          {
+            key: "country",
+            name: "Country",
+          },
+        ],
+        name: "Egypt",
+        abbrv: null,
+        location_id: "294200",
+      },
+    ],
+    category: {
+      key: "restaurant",
+      name: "Restaurant",
+    },
+    subcategory: [
+      {
+        key: "sit_down",
+        name: "Sit down",
+      },
+    ],
+    parent_display_name: "Tanta",
+    is_jfy_enabled: false,
+    nearest_metro_station: [],
+    phone: "+20 111 431 8479",
+    address_obj: {
+      street1: "Botros st.",
+      street2: null,
+      city: "Tanta",
+      state: null,
+      country: "Egypt",
+      postalcode: null,
+    },
+    address: "Botros st., Tanta Egypt",
+    is_candidate_for_contact_info_suppression: false,
+    cuisine: [
+      {
+        key: "10654",
+        name: "European",
+      },
+      {
+        key: "10665",
+        name: "Vegetarian friendly",
+      },
+    ],
+    dietary_restrictions: [
+      {
+        key: "10665",
+        name: "Vegetarian friendly",
+      },
+    ],
     establishment_types: [
       {
         key: "10591",

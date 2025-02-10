@@ -1,52 +1,45 @@
-import { Container, Row } from "react-bootstrap";
 import List from "./List/List";
 import Map from "./Map/Map";
-import { useEffect, useState } from "react";
-import { GetPlacesData } from "src/api";
-type Coordinates = {
-  lat: number;
-  lng: number;
-};
-
-type Bounds = {
-  sw: Coordinates;
-  ne: Coordinates;
-};
-
+import useSearchBar from "./useSearchBar";
+import { Container, Row } from "react-bootstrap";
 const SearchBar = () => {
-  const [Place, setPlaces] = useState([]);
-  const [childclicked, setchildclicked] = useState("");
-  const [bounds, setBounds] = useState<Bounds>({
-    sw: { lat: 0, lng: 0 },
-    ne: { lat: 0, lng: 0 },
-  });
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((e) => {
-      setcoordinates({ lat: e.coords.latitude, lng: e.coords.longitude });
-    });
-  }, []);
-
-  const [coordinates, setcoordinates] = useState<Coordinates>({
-    lat: 0,
-    lng: 0,
-  });
-  useEffect(() => {
-    GetPlacesData(bounds.sw, bounds.ne).then((data) => setPlaces(data));
-  }, [bounds, coordinates]);
-  console.log(Place);
-  console.log({ childclicked });
+  const {
+    setchildclicked,
+    setBounds,
+    PlacesData,
+    coordinates,
+    type,
+    setcoordinates,
+    settype,
+    rate,
+    setrate,
+    error,
+    loading,
+    FilterdRating,
+    WeatherData,
+    childclicked,
+  } = useSearchBar();
 
   return (
     <Container id="search-bar" className="search-bar" fluid>
-      <Row>
-        <List places={Place} />
+      <Row className="reverse-coloum">
+        <List
+          places={FilterdRating.length ? FilterdRating : PlacesData}
+          settype={settype}
+          type={type}
+          setrate={setrate}
+          rate={rate}
+          loading={loading}
+          error={error}
+        />
         <Map
           setcoordinates={setcoordinates}
           setbounds={setBounds}
           coordinates={coordinates}
-          Place={Place}
+          Place={FilterdRating.length ? FilterdRating : PlacesData}
           setchildclicked={setchildclicked}
+          WeatherData={WeatherData}
+          childclicked={childclicked}
         />
       </Row>
     </Container>

@@ -13,14 +13,19 @@ $header-font: "Montserrat";
 
 //global css code
 a {
-  color: white;
   text-decoration: none !important;
 }
 
 body {
   font-family: $main-font !important;
 }
-
+.loader {
+  width: 190px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
 // components css filess
 @import "./styles/Header";
 @import "./styles/LandingPage";
@@ -28,3 +33,5 @@ body {
 @import "./styles/searchbar";
 @import "./styles/Map";
 @import "./styles/List";
+@import "./styles/Footer";
+@import "./styles/FillteredPlaces";

@@ -1,7 +1,7 @@
 // ErrorBoundary.tsx
 
 import React, { Component, ReactNode } from "react";
-import error from "@assets/LottieFiles/error.json";
+import errorAnimation from "@assets/LottieFiles/errorAnimation.json";
 import Lottie from "lottie-react";
 import Header from "@components/common/Header/Header";
 import Footer from "@components/common/Footer/Footer";
@@ -33,7 +33,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         <>
           <Header />
           <Lottie
-            animationData={error}
+            animationData={errorAnimation}
             style={{ width: "300px", margin: "40px auto" }}
           />
           <h5 style={{ color: "red", textAlign: "center" }}>

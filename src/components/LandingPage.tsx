@@ -1,5 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-
 import { TbMapSearch } from "react-icons/tb";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import Lottie from "lottie-react";
